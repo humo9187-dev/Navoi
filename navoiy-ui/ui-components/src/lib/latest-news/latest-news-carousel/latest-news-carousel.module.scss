@@ -1,0 +1,65 @@
+@use '../../styles/colors.scss' as *;
+@use '../../styles/breakpoints.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.carouselRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: $sm) {
+  .carouselRow {
+    justify-content: center;
+  }
+}
+
+.card {
+  width: 100%;
+}
+
+.carouselItem {
+  display: flex;
+  width: 100%;
+}
+
+.desktopControls {
+  display: none;
+
+  @media (min-width: 806px) {
+    display: flex;
+  }
+}
+
+.arrowButton {
+  padding: 0;
+  background-color: $red;
+  border-radius: 50%;
+}
+
+.arrowButton::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid $beige-background;
+  border-radius: 50%;
+  transition: border 0.3s ease;
+}
+
+.arrowButton:hover::after {
+  border: $red;
+}
+
+.pagination {
+  gap: 4px;
+  display: flex;
+  justify-content: center;
+}

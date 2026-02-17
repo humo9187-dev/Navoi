@@ -1,0 +1,67 @@
+@use '../../styles/index.scss' as *;
+
+.newsListContainer {
+  grid-template-columns: 1fr;
+  @include respond($md) {
+    padding-inline: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  gap: 1.25em;
+  margin: auto;
+  max-width: $xxl;
+  align-items: flex-start;
+}
+
+.imgDateContainer {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.imgContainer {
+  aspect-ratio: 5/3;
+  object-fit: contain;
+}
+
+.date {
+  composes: font-jost-400 from global;
+  background-color: $white;
+  position: absolute;
+  bottom: 0;
+  padding: 5px 15px;
+  justify-self: center;
+  color: $red;
+  text-transform: capitalize;
+}
+
+.articleTitle {
+  composes: font-jost-500 from global;
+  text-align: center;
+}
+
+.articleSummary {
+  composes: font-jost-400 from global;
+  text-align: center;
+}
+
+.articleCard {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  border-radius: 8px;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  &:focus-visible {
+    outline: none;
+    transform: translateY(-10px);
+  }
+
+  &:active {
+    transform: translateY(0px);
+  }
+}

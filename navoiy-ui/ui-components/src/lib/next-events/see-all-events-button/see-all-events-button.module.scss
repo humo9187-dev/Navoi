@@ -1,0 +1,42 @@
+@use '../../styles/colors.scss' as *;
+
+.button {
+  composes: font-jost-400 from global;
+  height: 49px;
+  padding: 0 24px;
+  border-radius: 0;
+  font-size: 15px;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $black;
+  position: relative;
+  background: $yellow-button;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid $beige-background;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover::before {
+  opacity: 0;
+}
+
+.button:active {
+  background: $gold;
+}
+
+.button:focus {
+  box-shadow: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid $black;
+  outline-offset: 2px;
+}

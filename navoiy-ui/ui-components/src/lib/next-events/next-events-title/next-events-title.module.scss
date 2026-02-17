@@ -1,0 +1,36 @@
+@use '../../styles/colors.scss' as *;
+@use '../../styles/breakpoints.scss' as *;
+
+.headingWrapper {
+  padding: 1rem 4rem;
+}
+
+.desktopHeading {
+  composes: font-bona-400 from global;
+  display: none;
+  font-size: 59px;
+  line-height: 65px;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  color: $black;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.mobileHeading {
+  composes: font-bona-400 from global;
+  display: block;
+  font-size: 59px;
+  line-height: 65px;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  color: $black;
+  text-align: center;
+
+  @media (min-width: $md) {
+    display: none;
+  }
+}

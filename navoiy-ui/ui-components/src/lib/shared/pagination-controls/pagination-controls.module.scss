@@ -1,0 +1,16 @@
+@use '../../styles/index.scss' as *;
+
+:export {
+  text: $white;
+  backgroun: $red;
+}
+
+.paginationRoot {
+  text-align: center;
+}
+
+.iconButton {
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: 100%;
+}

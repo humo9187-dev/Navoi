@@ -1,0 +1,116 @@
+@use '../../../styles/index.scss' as *;
+
+.eventCard {
+  grid-template-columns: 1fr;
+  @include respond($lg) {
+    grid-template-columns: 1fr auto;
+  }
+  padding: 30px 0;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.eventInfoContainer {
+  display: grid;
+  text-decoration: none;
+  gap: 1.25rem;
+  align-items: center;
+  @include respond($md) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include respond($lg) {
+    grid-template-columns: 310px 1fr;
+  }
+
+  &:focus,
+  &:hover {
+    .titleContainer {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.eventImageContainer {
+  flex-direction: column;
+  grid-row: span 1;
+  grid-column: 1;
+  @include respond($lg) {
+    grid-row: span 1;
+  }
+}
+
+.img {
+  display: block;
+  width: 100%;
+  @include respond($md) {
+    height: 282px;
+  }
+  @include respond($lg) {
+    height: 228px;
+  }
+  object-fit: cover;
+}
+
+.tagsContainer {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: $red;
+}
+
+.titleContainer {
+  composes: font-bona-400 from global;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 1rem;
+  @include respond($lg) {
+    justify-self: end;
+    flex-direction: column;
+  }
+}
+
+.baseButton {
+  @include respond($lg) {
+    min-width: 9.4375rem;
+    flex: none;
+  }
+  height: 2.5625rem;
+  display: flex;
+  flex: 1;
+  font-size: 0.9374rem;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  color: $white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0 1rem;
+}
+
+.primaryButton {
+  @extend .baseButton;
+  background-color: $red;
+  box-shadow:
+    inset 0 0 0 3px $red,
+    inset 0 0 0 4px $white-50;
+  &:hover {
+    box-shadow: inset 0 0 0 4px $red;
+  }
+}
+
+.secondaryButton {
+  @extend .baseButton;
+  background-color: $gold;
+  box-shadow:
+    inset 0 0 0 3px $gold,
+    inset 0 0 0 4px $white-50;
+  color: $black-heading;
+  &:hover {
+    box-shadow: inset 0 0 0 4px $gold;
+  }
+}

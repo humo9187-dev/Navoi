@@ -1,0 +1,109 @@
+@use '../../styles/colors.scss' as *;
+
+.card {
+  background-color: $white;
+  border: 1px solid $black-heading;
+  box-shadow: 0 4px 6px $black;
+  overflow: hidden;
+  height: 500px;
+  width: 303px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image {
+  width: 100%;
+  height: 228px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.innerBox {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Chrome, Safari */
+.innerBox::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.innerBox {
+  scrollbar-width: none;
+}
+
+/* IE/Edge */
+.innerBox {
+  -ms-overflow-style: none;
+}
+
+.tags {
+  composes: font-syne-500 from global;
+  font-size: 14px;
+  color: $red;
+  text-transform: uppercase;
+}
+
+.title {
+  composes: font-jost-500 from global;
+  font-size: 20px;
+  color: $black-heading;
+  margin-bottom: 8px;
+}
+
+// .title:hover {
+//   text-decoration: underline;
+// }
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  color: $black-heading;
+  margin-bottom: 16px;
+  //?
+}
+
+.detailsSection {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 16px;
+  margin-top: auto;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.infoText {
+  composes: font-jost-400 from global;
+  font-size: 16px;
+  color: $black-heading;
+}
+
+.button {
+  composes: font-jost-400 from global;
+  flex: 1;
+  background-color: $white;
+  color: $black-heading;
+  border-top: 1px solid $black-heading;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.button:first-child {
+  border-right: 1px solid $black-heading;
+}
+
+.button:hover {
+  text-decoration: underline;
+}

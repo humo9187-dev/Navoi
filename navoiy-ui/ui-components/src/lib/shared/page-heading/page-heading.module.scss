@@ -1,0 +1,22 @@
+@use '../../styles/index' as *;
+
+.headerContainer {
+  display: grid;
+  gap: 1rem;
+  justify-content: space-between;
+  grid-template-columns: 1fr;
+  @include respond($md) {
+    grid-template-columns: auto auto;
+  }
+}
+
+.sectionTitle {
+  composes: font-bona-400 from global;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  @include respond($lg) {
+    font-size: 3.7rem;
+  }
+}

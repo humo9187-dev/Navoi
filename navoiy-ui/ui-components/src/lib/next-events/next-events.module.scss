@@ -1,0 +1,16 @@
+@use '../styles/index.scss' as *;
+
+.background {
+  background-color: $beige-background;
+}
+.container {
+  width: 100%;
+  max-width: $xxl;
+  padding: px-to-rem(100) px-to-rem(17) px-to-rem(70);
+  margin: 0 auto;
+
+  @media (min-width: $xxl) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

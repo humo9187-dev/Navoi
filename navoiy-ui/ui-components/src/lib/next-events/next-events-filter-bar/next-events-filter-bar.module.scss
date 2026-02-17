@@ -1,0 +1,47 @@
+@use '../../styles/breakpoints.scss' as *;
+
+.wrapper {
+  padding-left: 0;
+  padding-right: 0;
+  padding: 1rem 4.3rem 2rem 4.3rem;
+
+  @media (min-width: $md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.flexContainer {
+  width: 100%;
+  gap: 16px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  display: flex;
+
+  @media (min-width: $md) {
+    gap: 24px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.categoriesBox {
+  flex: 1;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $md) {
+    justify-content: flex-start;
+  }
+}
+
+.buttonBox {
+  align-self: center;
+
+  @media (min-width: $md) {
+    align-self: auto;
+  }
+}

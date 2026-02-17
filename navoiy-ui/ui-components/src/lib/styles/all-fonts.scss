@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Jost';
+  src: url('./fonts/Jost-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('./fonts/Jost-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('./fonts/Jost-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bona Nova';
+  src: url('./fonts/BonaNova-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Syne';
+  src: url('./fonts/Syne-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-jost-400 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+}
+
+.font-jost-500 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+}
+
+.font-jost-600 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+}
+
+.font-bona-400 {
+  font-family: 'Bona Nova', serif;
+  font-weight: 400;
+}
+
+.font-syne-500 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 500;
+}

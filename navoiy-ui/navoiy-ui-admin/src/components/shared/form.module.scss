@@ -1,0 +1,12 @@
+@use 'index.scss' as *;
+
+.stepsContainer {
+  height: 100lvh;
+  padding: 0 0 2rem;
+}
+
+.formSection {
+  border: 1px solid $gray;
+  border-radius: 10px;
+  padding: 1rem;
+}

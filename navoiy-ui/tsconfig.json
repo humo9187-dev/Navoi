@@ -1,0 +1,28 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./navoiy-ui-admin"
+    },
+    {
+      "path": "./ui-components"
+    },
+    {
+      "path": "./navoiy-ui"
+    },
+    {
+      "path": "./store"
+    },
+    {
+      "path": "./types"
+    },
+    {
+      "path": "./utils"
+    },
+    {
+      "path": "./api"
+    }
+  ]
+}

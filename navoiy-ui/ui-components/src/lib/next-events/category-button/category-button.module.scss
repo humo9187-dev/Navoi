@@ -1,0 +1,39 @@
+@use '../../styles/colors.scss' as *;
+
+.button {
+  composes: font-jost-400 from global;
+  height: 39px;
+  padding: 12px 17px;
+  border-radius: 0;
+  border: 1px solid $black-heading;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  text-align: center;
+  background: transparent;
+  color: $black-heading;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.buttonActive {
+  background: $red;
+  color: $white;
+}
+
+.button:hover {
+  background: transparent;
+  color: $red;
+  border-color: $red;
+}
+
+.button:focus {
+  box-shadow: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid $black-heading;
+  outline-offset: 2px;
+}

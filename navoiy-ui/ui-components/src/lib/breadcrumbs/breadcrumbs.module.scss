@@ -1,0 +1,42 @@
+@use '../styles/index' as *;
+
+.wrapper {
+  height: 90px;
+  background-image:
+    linear-gradient(rgba(241, 227, 189, 0.5), rgba(241, 227, 189, 0.5)),
+    url('../assets/images/breadcrumbs-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: $xxl;
+  margin: 0 auto;
+  padding-left: 70px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 40px;
+    
+    &:has(.crumb > :only-child) {
+      justify-content: center;
+      padding-left: 0;
+    }
+  }
+}
+
+.crumb {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text {
+  composes: font-jost-400 from global;
+  color: $black;
+  white-space: nowrap;
+}

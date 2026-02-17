@@ -1,0 +1,109 @@
+@use '../../../../ui-components/src/lib/styles/index' as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    color: #160807;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-top: px-to-rem(40);
+    margin-bottom: px-to-rem(6);
+    font-size: clamp(2rem, 6vw, 6rem);
+    padding: 0 px-to-rem(32);
+
+    @media (min-width: $md) {
+      padding: 0;
+    }
+  }
+
+  p {
+    max-width: px-to-rem(700);
+    margin-bottom: 0;
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+    line-height: 1.4;
+    color: #160807;
+    text-align: center;
+    padding: 0 px-to-rem(32);
+
+    @media (min-width: $md) {
+      max-width: px-to-rem(700);
+      padding: 0;
+    }
+  }
+}
+
+.backgroundWrapper {
+  width: 100%;
+  background-image: url('../assets/images/pattern.png'), linear-gradient(180deg, rgba(249, 238, 215, 0) 0%, #f9eed7 100%);
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+.content {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta {
+  margin-top: px-to-rem(32);
+  margin-bottom: px-to-rem(75);
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 30px;
+  gap: 10px;
+  min-width: 151px;
+  width: auto;
+  height: 49px;
+  background: #a80403;
+  color: #fff;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  white-space: nowrap;
+
+  &:hover {
+    background: #8b0000;
+  }
+
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    width: calc(100% - 8px);
+    height: 41px;
+    left: 4px;
+    top: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+  }
+}
+
+.imagesWrapper {
+  display: flex;
+  gap: 30px;
+  max-width: 1440px;
+  padding: 0 30px;
+
+  @media (min-width: $xxl) {
+    gap: 65px;
+    padding: 0 70px;
+  }
+}
+
+.imageItem {
+  min-width: 160px;
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "lib": ["dom", "es2022"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2022",
+    "customConditions": ["@navoiy-workspace/source"],
+    "paths": {
+      "@navoiy-workspace/store": ["store/src/index.ts"],
+      "@navoiy-workspace/types": ["types/src/index.ts"],
+      "@navoiy-workspace/ui-components": ["ui-components/src/index.ts"],
+      "@navoiy-workspace/utils": ["utils/src/index.ts"]
+    }
+  }
+}

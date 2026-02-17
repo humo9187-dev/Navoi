@@ -1,0 +1,23 @@
+@use '../../../styles/index.scss' as *;
+
+.dayHeader {
+  font-size: 1.25rem;
+  background-color: $beige-background;
+  font-weight: 500;
+  padding: 1.35rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  @include respond($md) {
+    justify-content: flex-start;
+  }
+  text-transform: capitalize;
+}

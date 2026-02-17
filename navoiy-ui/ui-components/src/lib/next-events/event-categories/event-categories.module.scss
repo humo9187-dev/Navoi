@@ -1,0 +1,72 @@
+@use '../../styles/colors.scss' as *;
+@use '../../styles/breakpoints.scss' as *;
+
+.desktopWrapper {
+  display: none;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  @media (min-width: $md) {
+    display: flex;
+  }
+}
+
+.mobileWrapper {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 20px;
+  text-align: center;
+
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.selectBox {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: 163px;
+  height: 49px;
+  border: 1px solid $black-heading;
+}
+
+.activeCategory {
+  padding-left: 12px;
+  font-size: 16px;
+  color: $black-heading;
+}
+
+.divider {
+  position: absolute;
+  left: 110px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: $black-heading;
+}
+
+.nativeSelectRoot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nativeSelectField {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.indicatorWrapper {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}

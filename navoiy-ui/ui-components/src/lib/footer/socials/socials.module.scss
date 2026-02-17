@@ -1,0 +1,31 @@
+@use '../../styles/index.scss' as *;
+
+.icon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+
+  .iconCircle {
+    stroke: $white;
+    fill: transparent;
+    transition:
+      fill 300ms ease-in,
+      stroke 300ms ease-in;
+  }
+
+  .iconShape {
+    fill: $white;
+    transition: fill 300ms ease-in;
+  }
+
+  &:hover {
+    .iconCircle {
+      fill: $gold;
+      stroke: $gold;
+    }
+
+    .iconShape {
+      fill: $black;
+    }
+  }
+}

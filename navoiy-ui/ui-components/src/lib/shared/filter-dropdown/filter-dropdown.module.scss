@@ -1,0 +1,43 @@
+@use '../../styles/index' as *;
+
+.filterDropdown {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    width: 163px;
+    height: 49px;
+    border-color: $black;
+    border-radius: 0;
+    align-items: center;
+  }
+
+  &__label {
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__menu {
+    display: grid;
+    z-index: 50;
+    padding: 10px;
+    width: 163px;
+    border: 1px solid $black;
+    border-radius: 0;
+    background: $white;
+  }
+
+  &__menuItem {
+    composes: font-jost-400 from global;
+    line-height: 32px;
+    text-transform: capitalize;
+    cursor: pointer;
+    justify-content: center;
+    &:hover {
+      color: $red;
+      text-decoration: underline;
+    }
+  }
+}

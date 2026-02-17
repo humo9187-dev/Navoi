@@ -1,0 +1,139 @@
+@use '../styles/index.scss' as *;
+
+.footer {
+  background-color: $black-heading;
+  composes: font-jost-400 from global;
+  font-size: 16px;
+  color: $white;
+  overflow: hidden;
+
+  @media (max-width: $md) {
+    background-color: $black;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  column-gap: 52px;
+  padding: 80px 32px 90px;
+
+  @media (max-width: $lg) {
+    flex-direction: column;
+    row-gap: 52px;
+  }
+
+  @media (max-width: $md) {
+    padding: 45px 32px 30px;
+  }
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+  text-align: center;
+  flex: 1;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.footerLink,
+.navigationHeading {
+  color: $white;
+  transition: all 300ms ease-in;
+
+  &:hover {
+    color: $gold;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.socials {
+  display: flex;
+  column-gap: 20px;
+}
+
+.navigation {
+  display: flex;
+  column-gap: 52px;
+  flex: 3;
+  justify-content: space-evenly;
+}
+
+.navigationMenu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  color: $white;
+}
+
+.navigationHeading {
+  margin-bottom: 20px;
+  composes: font-bona-400 from global;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.accordionItem {
+  position: relative;
+  border: none;
+
+  &::before,
+  &:last-child::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background: $white-transparent-50;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &:last-child::after {
+    bottom: 0;
+  }
+}
+
+.accordionItemHeading {
+  justify-content: space-between;
+}
+
+.accordionItemHeading .navigationHeading {
+  margin-bottom: 0;
+}
+
+.accordionItemIndicator {
+  color: $white-soft;
+}
+
+.accordionSubmenu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.rights {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid $white-transparent;
+  text-align: center;
+
+  @media (max-width: $md) {
+    border-top: none;
+    padding-left: 52px;
+    padding-right: 52px;
+    padding-bottom: 30px;
+  }
+}

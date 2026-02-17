@@ -1,0 +1,12 @@
+@use '../styles/index.scss' as *;
+
+.mainComponent {
+  > * {
+    margin-top: 3.25rem;
+    margin-bottom: 3.25rem;
+  }
+  margin-top: 4.6875rem;
+  margin-bottom: 4.6875rem;
+  composes: font-jost-400 from global;
+  color: $black-heading;
+}

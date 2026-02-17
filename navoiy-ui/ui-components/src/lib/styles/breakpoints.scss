@@ -1,0 +1,12 @@
+$xs: 24rem; // ~384px
+$sm: 30rem; // ~480px
+$md: 48rem; // ~768px
+$lg: 62rem; // ~992px
+$xl: 80rem; // ~1280px
+$xxl: 90rem; // ~1440px
+
+@mixin respond ($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

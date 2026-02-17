@@ -1,0 +1,19 @@
+@use '../styles/index' as *;
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text {
+  font-size: 16px;
+  color: $black-heading;
+  composes: font-jost-400 from global;
+}

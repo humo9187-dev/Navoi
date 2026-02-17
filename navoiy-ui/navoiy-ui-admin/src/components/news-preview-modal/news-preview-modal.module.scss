@@ -1,0 +1,77 @@
+@use '../../../../ui-components/src/lib/styles/index.scss' as *;
+
+.container {
+  padding: 0px;
+}
+.content {
+  padding: 0px 30px 50px;
+}
+
+.image {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.title {
+  composes: font-bona-400 from global;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: $black-heading;
+}
+
+.time {
+  color: $black-heading;
+  margin-bottom: 20px;
+  composes: font-jost-400 from global;
+}
+
+.writter {
+  composes: font-jost-400 from global;
+  color: $red;
+  margin-bottom: 30px;
+}
+
+.text {
+  composes: font-jost-400 from global;
+  margin-bottom: 25px;
+  color: $black-heading;
+}
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.socialText {
+  font-size: 16px;
+  color: #000;
+}
+@media (min-width: $md) {
+  .container {
+    padding: 100px 100px;
+    max-width: $xxl;
+    margin: 0 auto;
+  }
+  .content {
+    padding: 0px;
+  }
+}
+
+@media (min-width: $lg) {
+  .container {
+    padding: 100px 100px;
+    max-width: $xxl;
+    margin: 0 auto;
+    width: 860px;
+  }
+
+  .image {
+    margin-bottom: 50px;
+  }
+}

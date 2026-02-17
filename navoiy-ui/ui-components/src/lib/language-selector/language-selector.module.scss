@@ -1,0 +1,56 @@
+@use '../styles/index' as *;
+
+.lang-selector {
+  padding: 0;
+}
+
+.lang-button {
+  composes: font-jost-400 from global;
+  font-size: 15px;
+  color: $black-heading;
+  text-transform: uppercase;
+
+  &:hover {
+    outline: none;
+    background: transparent;
+  }
+}
+
+.lang-menu {
+  position: absolute;
+  top: 32px;
+  right: calc(100% - 76px);
+
+  padding: 24px 38px;
+  min-width: fit-content;
+  border: 1px solid $black-heading;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.lang-option {
+  composes: font-jost-400 from global;
+  width: fit-content;
+  padding-block: 0px;
+  padding-inline: 0px;
+
+  font-size: 15px;
+  color: $black-heading;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    padding-bottom: 10px;
+  }
+
+  &:hover {
+    background: none;
+    color: $red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  text-decoration: underline;
+  color: $red;
+}

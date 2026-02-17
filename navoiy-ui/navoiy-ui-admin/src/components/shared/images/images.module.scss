@@ -1,0 +1,17 @@
+@use '../form.module.scss';
+
+.imageCard {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  position: relative;
+  gap: 10px;
+}
+
+.imageCardImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}

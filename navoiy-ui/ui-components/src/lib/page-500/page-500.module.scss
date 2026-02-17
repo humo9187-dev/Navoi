@@ -1,0 +1,97 @@
+@use '../styles/index.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.title {
+  composes: font-bona-400 from global;
+  font-size: 48px;
+  margin-bottom: 24px;
+  color: $black;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-align: center;
+  word-break: break-word;
+
+  @media (max-width: $md) {
+    font-size: 36px;
+  }
+}
+
+.message {
+  composes: font-jost-400 from global;
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: $black-heading;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.baseButton {
+  composes: font-jost-400 from global;
+  display: flex;
+  flex: 1;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  padding: 14px 35px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    flex: none;
+  }
+}
+
+.primaryButton {
+  @extend .baseButton;
+  background-color: $gold;
+  box-shadow:
+    inset 0 0 0 3px $gold,
+    inset 0 0 0 4px $white-50;
+  color: $black-heading;
+
+  &:hover {
+    box-shadow: inset 0 0 0 4px $gold;
+  }
+}
+
+.secondaryButton {
+  @extend .baseButton;
+  background-color: $red;
+  box-shadow:
+    inset 0 0 0 3px $red,
+    inset 0 0 0 4px $white-50;
+  color: $white;
+
+  &:hover {
+    box-shadow: inset 0 0 0 4px $red;
+  }
+}

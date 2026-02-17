@@ -1,0 +1,52 @@
+@use '../styles/index' as *;
+
+.menu-item,
+.menu-subitem {
+  composes: font-jost-400 from global;
+  padding: 0;
+  color: $black-heading;
+}
+
+.menu-item {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.menu-subitem {
+  width: fit-content;
+  font-size: 16px;
+  line-height: 32px;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-item:hover,
+.menu-subitem:hover {
+  color: $red;
+  text-decoration: underline;
+}
+
+.dropdown,
+.submenu {
+  position: absolute;
+  width: max-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 45px 24px 26px;
+  box-shadow: none;
+  border: 1px solid $black-heading;
+  border-radius: 0px;
+}
+
+.dropdown {
+  top: 32px;
+  transform: translateX(-25%);
+}
+
+.submenu {
+  top: -24px;
+  left: 45px;
+}
